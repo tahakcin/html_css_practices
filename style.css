@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    width: 100%;
+    color: rgb(156 163 175);
+    background-color: black;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+.p-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 7px 10px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+header.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+header.header #logo {
+    margin-right: 20px;
+    width: 6rem;
+    height: 100px;
+    border-radius: 100px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    font-size: 20px;
+    color: #eeee;
+}
+
+header nav a:hover {
+    transition: .5s;
+    color: red;
+}
+
+header .left-section {
+    align-items: center;
+}
+
+header section .title {
+    font-weight: 300;
+}
+
+header section .name {
+    font-size: 2em;
+    font-weight: 600;
+    color: #dede;
+}
+
+
+.photo-album-intro,
+.about-me,
+.contact {
+    margin: 50px auto;
+    padding: 2px;
+    border: 1px solid #bcbec1;
+    border-radius: 10px;
+    width: 800px;
+    height: 340px;
+}
+
+.contact {
+    height: 800px;
+}
+
+.contact .head {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact .input {
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact label {
+    font-size: 1.4em;
+    font-weight: 450;
+}
+
+.contact input,
+select {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 12px 10px;
+    margin-bottom: 20px;
+}
+
+.contact .contact-boxes {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 12px 10px;
+    transition: border-color 0.3s ease;
+}
+
+
+.contact .contact-boxes:hover {
+    border-color: red;
+}
+
+
+.contact .text-area-and-button {
+    padding: 40px;
+}
+
+.contact .text-area-and-button .text-area {
+    flex-direction: column;
+}
+
+.contact .input,
+.text-area-and-button .text-area {
+    margin: 0 auto;
+}
+
+.contact .text-area-and-button .text-area #text-area {
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 12px 10px;
+    margin-bottom: 60px;
+}
+
+.contact .send-button {
+    
+    font-size: 1.125em;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 50px;
+    width: 100px;
+    height: 40px;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);;
+    transition: 0.3s;
+}
+
+.contact .send-button:hover {
+    transform: scale(1.1);
+}
+
+
+.contact .text-area-and-button,
+.contact .input .input-name,
+.input-email,
+.input-phone,
+.select-subject {
+    flex-direction: column;
+}
+
+.about-me .head {
+    width: 300px;
+    padding: 20px;
+    color: #dede;
+}
+
+.about-me .about-me-text {
+    padding: 20px;
+    font-size: 1.125em;
+}
+
+.photo-album-intro .head {
+    width: 300px;
+    padding: 30px;
+    color: #dede;
+}
+
+.photo-album-intro .intro-text {
+    padding: 30px;
+    font-size: 1.125em;
+}
+
+
+.photo-album-intro .buttons {
+    padding: 30px;
+}
+
+.photo-album-intro .link-button {
+    margin-right: 10px;
+}
+
+.photo-album-intro .link-button .logo-svg {
+    transition: fill 0.5s ease;
+}
+
+.photo-album-intro .link-button .logo-svg:hover {
+    fill: #eeee;
+}
+
+.img-card {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.img-card .image {
+    width: 250px;
+    height: 400px;
+    margin: 0px auto;
+    border-radius: 15px;
+}
+
+.img-card .img-date {
+    margin: 10px auto;
+    background-color: rgb(37 99 235);
+    border-radius: 20px;
+    color: rgb(255 255 255);
+    font-size: 1.125em;
+    text-align: center;
+}
+
+.img-card .description {
+    margin: 10px auto;
+    color: rgb(156 163 175);
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 9999px;
+    font-size: 1.125em;
+    padding: 7px 15px;
+}
