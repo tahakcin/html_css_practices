@@ -16,6 +16,13 @@ namespace contact.Controllers
     public class HomeController : Controller
     {
 
+        readonly IConfiguration configuration;
+
+        public HomeController(IConfiguration configuration)
+        {
+            this.configuration = configuration; 
+        }
+
 
         public ActionResult Index()
         {
@@ -35,22 +42,23 @@ namespace contact.Controllers
         [HttpPost]
         public ActionResult Contact(string name, string email,string phone, string subject, string message)
         {
-           
+            var myEmail = configuration["MailInfo:MyEmail"];
+            var myPassword = configuration["MailInfo:Password"];
             try
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
                 
                 mail.From = new MailAddress(email);
-                mail.To.Add("MYEMAİLADDRESSWİLLBEHERE");
+                mail.To.Add(myEmail);
 
                 mail.Subject = "Contact Us Form: " + subject;
                 mail.Body = $"Name: {name}\nEmail: {email}\nPhone: {phone}\nSubject: {subject}\nMessage: {message}";
 
                 
                 smtpClient.Port = 587;
-                smtpClient.Credentials = new NetworkCredential("MYEMAİLADDRESSWİLLBEHERE", "MYPASSWORDWİLLBEHERE");
-                smtpClient.EnableSsl = true;
+                smtpClient.Credentials = new NetworkCredential(myEmail, myPassword);
+                smtpClient.EnableSsl = true; 
 
                 smtpClient.Send(mail);
                 ViewBag.Message = "Your message has been sent successfully!";

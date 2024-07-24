@@ -41,7 +41,7 @@ namespace StartUp
                 FileProvider = new PhysicalFileProvider(
             Path.Combine(Directory.GetCurrentDirectory(), @"StaticFiles")),
                 RequestPath = new PathString("/StaticFiles")
-            });
+            }); 
 
             app.UseRouting();
 
@@ -59,6 +59,11 @@ namespace StartUp
                     name: "about",
                     pattern: "{controller=Home}/{action=About}");
             });
+        }
+
+        protected void Encryption(object sender, EventArgs e)
+        {
+
         }
 
     }
