@@ -250,3 +250,13 @@ select {
     font-size: 1.125em;
     padding: 7px 15px;
 }
+.contact .name-blank-error {
+    height: 30px;
+    color: red;
+    margin-right: 180px;
+}
+.contact .email-blank-error {
+    height: 30px;
+    color: red;
+    padding-left: 425px;
+}
